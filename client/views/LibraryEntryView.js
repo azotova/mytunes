@@ -7,7 +7,8 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-      this.model.play();
+   //   this.model.play();
+      this.model.enqueue(); //does not make any sense. Does a click really triggers both playing and enqueuing?
     }
   },
 
