@@ -7,10 +7,22 @@ var PlayerView = Backbone.View.extend({
 
   
   initialize: function() {
+    /*this.on("play", function (song) {
+      this.setSong(song);
+    }, this);*/
+    
+    this.$el.on("ended", (function () {  //fully copied from the solution file; 
+      this.model.ended();
+      console.log("end");
+    }).bind(this));    
   },
+
 
   setSong: function(song){
     this.model = song;
+    /*if(!this.model){    //fully copied from the solution file;
+      this.el.pause();
+    }*/
     this.render();
   },
 

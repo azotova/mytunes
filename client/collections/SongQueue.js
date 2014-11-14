@@ -18,15 +18,15 @@ var SongQueue = Songs.extend({
   },
   
   onEnded: function(song) {   //song argument is not passed in, it's always undefined. Keep it here for sentimental reasons;
-  	console.log("song", song);
+  //	console.log("song", song);
   	this.shift();
-    if (this.length === 1) {
+    if (this.length >= 1) {  //sign copied from the solution lecture and generally makes sense
       this.playFirst();
     }
   },
 
   onDequeue: function(song) {
-  	console.log("deqSong", song);
+ // 	console.log("deqSong", song);
     this.remove(song);
   }
 

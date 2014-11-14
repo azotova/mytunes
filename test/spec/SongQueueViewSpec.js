@@ -20,6 +20,7 @@ describe('SongQueueView', function() {
     sinon.spy(SongQueueEntryView.prototype, 'render');
     view = new SongQueueView({collection: fakeSongs});
     view.render();
+   // console.log("view", view);
     expect(SongQueueEntryView.prototype.render).to.have.been.called;
   });
 
