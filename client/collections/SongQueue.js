@@ -17,7 +17,7 @@ var SongQueue = Songs.extend({
     this.models[0].play();
   },
   
-  onEnded: function(song) {
+  onEnded: function(song) {   //song argument is not passed in, it's always undefined. Keep it here for sentimental reasons;
   	console.log("song", song);
   	this.shift();
     if (this.length === 1) {
